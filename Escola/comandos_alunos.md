@@ -322,6 +322,10 @@ SELECT alunos.nome, primeira_nota, segunda_nota, ROUND(AVG((primeira_nota + segu
 ```sql
 
 -- 15ª Digitação (SQL para criar a consulta acima)
+```UPDATE CURSOS
+SET titulo = 'AdobeXD'
+carga_horaria = 15,
+Where id = 4;
 
 ```
 ![Relatório 11](resultados_alunos/relatorio11.jpg)
@@ -343,6 +347,9 @@ DELETE FROM alunos WHERE nome = 'Mário Calore' AND curso_id = 3;
 ```sql
 
 -- 17ª Digitação (SQL para criar a consulta acima)
+SELECT alunos.nome, cursos.titulo AS titulo from alunos INNER JOIN cursos
+ON alunos.curso_id = cursos.id
+GROUP BY nome ORDER BY nome;W
 
 ```
 ![Relatório 13](resultados_alunos/relatorio13.jpg)
